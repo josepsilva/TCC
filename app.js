@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
-app.use((req, res, next) => {
-  res.status(200).send({
-    mensagem: "ok, deu certo",
-  });
-});
+
+const rotaprofessor = require("./routes/professor");
+const rotaalunos = require("./routes/alunos");
+
+app.use("/professor", rotaprofessor);
+app.use("/alunos", rotaalunos);
 
 module.exports = app;
