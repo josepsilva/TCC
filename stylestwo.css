@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.title {
+  font-family: Monofett;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 62px;
+  text-align: left;
+  margin: 52px;
+  margin-left: 182px;
+}
+
+.paragraph {
+  font-family: Inter;
+  width: 219px;
+  height: 27px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: -0.05em;
+  margin-left: 180px;
+  color: rgba(102, 102, 102, 1);
+}
+
+input {
+  margin-left: 176px;
+  width: 342px;
+  height: 32px;
+  border-radius: 4px;
+  color: rgba(213, 215, 220, 1);
+  border-style: solid;
+  border-color: rgba(213, 215, 220, 1);
+}
+
+.btn {
+  margin-left: 171px;
+}
+button {
+  font-family: Inter;
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(99, 99, 99, 1);
+  background-color: rgba(254, 231, 116, 1);
+  width: 85px;
+  height: 34px;
+  border-radius: 100px;
+  border: none;
+}
+
+img {
+  width: 544px;
+  height: 481px;
+  margin-top: -332px;
+  margin-left: 700px;
+}
+
+.list {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: -0.02em;
+  margin-left: 168px;
+}
+.new-student {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  margin-top: -20px;
+  margin-left: 160px;
+}
+button.new-student {
+  text-align: center;
+  background-color: rgba(0, 176, 135, 1);
+}

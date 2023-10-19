@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+h1 {
+  font-family: Monofett;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 62px;
+  text-align: left;
+  margin: 50px;
+  margin-left: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 50px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.border-yllow {
+  background-color: rgb(242, 242, 132);
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: -10px;
+}
+
+p {
+  font-family: Plus Jakarta Sans;
+  font-size: 40px;
+  font-weight: 800;
+  margin-left: 180px;
+  margin-top: -10px;
+  color: rgba(24, 30, 75, 1);
+}
+
+.color-yellow {
+  color: rgba(248, 164, 1, 1);
+}
+.color-blue {
+  color: rgba(99, 170, 235, 1);
+}
+
+img {
+  width: 633px;
+  height: 513px;
+  margin-top: -275px;
+  margin-left: 818px;
+}
+h2 {
+  color: rgb(94, 98, 130, 1);
+  font-family: Plus Jakarta Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: -145px;
+  margin-left: 207px;
+}
+
+h3 {
+  font-family: roboto;
+  margin-top: 104px;
+  margin-left: 272px;
+  width: 348px;
+  height: 23px;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+button {
+  font-family: Plus Jakarta Sans;
+  margin-left: 650px;
+  margin-top: -20px;
+  font-size: 14px;
+  width: 161.06px;
+  height: 48px;
+  background-color: rgba(68, 117, 242, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  border: none;
+}
