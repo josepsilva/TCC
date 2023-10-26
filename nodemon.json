@@ -1,6 +1,6 @@
 {
   "env": {
-    "MYSQL_USER": "josep",
+    "MYSQL_USER": "jsep",
     "MYSQL_PASSWORD": "root",
     "MYSQL_DATABASE": "banco",
     "MYSQL_HOST": "localhost",
