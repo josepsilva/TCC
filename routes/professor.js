@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const mysql = require("../mysql").pool;
 
 //RETORNA TODOS OS PROFESSORES
 router.get("/", (req, res, next) => {
@@ -10,8 +11,25 @@ router.get("/", (req, res, next) => {
 
 //INSERE UM PROFESOR
 router.post("/", (req, res, next) => {
-  res.status(201).send({
-    mensagem: "Insere um novo professor",
+  mysql.getConnection((error, conn) => {
+    conn.query("INSERT INTO professor (nome, materia) VALUES (?,?)", [
+      req.body.nome,
+      req.body.materia,
+      (error, resultado, field) => {
+        conn.release();
+
+        if (error) {
+          return res.status(500).send({
+            error: error,
+            response: null,
+          });
+        }
+        res.status(201).send({
+          mensagem: "Professor inserido com sucesso",
+          id_professor: resultado.insertId,
+        });
+      },
+    ]);
   });
 });
 

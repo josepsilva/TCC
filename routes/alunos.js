@@ -10,8 +10,13 @@ router.get("/", (req, res, next) => {
 
 //INSERE UM ALUNO
 router.post("/", (req, res, next) => {
+  const aluno = {
+    id_professor: req.body.id_professor,
+    nome: req.body.nome,
+  };
   res.status(201).send({
     mensagem: "O aluno foi cadastrado",
+    alunoCadastrado: aluno,
   });
 });
 
