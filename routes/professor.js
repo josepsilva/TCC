@@ -11,25 +11,34 @@ router.get("/", (req, res, next) => {
 
 //INSERE UM PROFESOR
 router.post("/", (req, res, next) => {
+  console.log("entrou aqui 0");
   mysql.getConnection((error, conn) => {
-    conn.query("INSERT INTO professor (nome, materia) VALUES (?,?)", [
-      req.body.nome,
-      req.body.materia,
+    if (error) {
+      console.log("entrou aqui 1");
+      console.error(error);
+      res.status(500).send({ error: error });
+    }
+    conn.query(
+      "INSERT INTO professor (nome, materia) VALUES (?,?)",
+      [req.body.nome, req.body.materia],
       (error, resultado, field) => {
+        console.log("entrou aqui 2");
         conn.release();
 
         if (error) {
+          console.log("entrou aqui 3");
           return res.status(500).send({
             error: error,
             response: null,
           });
         }
+        console.log("entrou aqui 4");
         res.status(201).send({
           mensagem: "Professor inserido com sucesso",
           id_professor: resultado.insertId,
         });
-      },
-    ]);
+      }
+    );
   });
 });
 
