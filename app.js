@@ -7,6 +7,7 @@ const rotaprofessor = require("./routes/professor");
 const rotaalunos = require("./routes/alunos");
 
 app.use(morgan("dev"));
+app.use("/uploads", express.static("uploads"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
