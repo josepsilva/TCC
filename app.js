@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 
 const rotaprofessor = require("./routes/professor");
 const rotaalunos = require("./routes/alunos");
+const rotausuario = require("./routes/usuarios");
 
 app.use(morgan("dev"));
 app.use("/uploads", express.static("uploads"));
@@ -37,6 +38,7 @@ app.use((req, res, next) => {
 
 app.use("/professor", rotaprofessor);
 app.use("/alunos", rotaalunos);
+app.use("/usuarios", rotausuario);
 
 //Quando não encontrar rota
 app.use((req, res, next) => {
